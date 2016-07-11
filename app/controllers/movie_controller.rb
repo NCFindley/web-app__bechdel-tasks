@@ -22,6 +22,8 @@ MyApp.get "/" do
   erb :"movies/home"
 end
 
+
+
 MyApp.post "/movies/search" do
   session["temporary_error_message"] = nil
 
@@ -53,6 +55,8 @@ MyApp.post "/movies/search" do
     redirect "/"
   end
 end
+
+
 
 MyApp.get "/movies/:search/:category/:bechdel/results" do
   @bechdel = params[:bechdel]
